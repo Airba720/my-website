@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День Святого Валентина</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: pink;
+        }
+        h1 {
+            color: red;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yes {
+            background-color: green;
+            color: white;
+        }
+        #no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ты будешь моей девушкой? ❤</h1>
+        <div class="buttons">
+            <button id="yes">Да</button>
+            <button id="no">Нет</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("yes").addEventListener("click", function() {
+            alert("Ура! ❤ Я самый счастливый!");
+        });
+
+        document.getElementById("no").addEventListener("mouseover", function() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            this.style.left = x + "px";
+            this.style.top = y + "px";
+        });
+    </script>
+
+</body>
+</html>
